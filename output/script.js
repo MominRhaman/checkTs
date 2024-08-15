@@ -1,16 +1,19 @@
 "use strict";
-function combine(input1, input2) {
-    let result;
-    if (typeof input1 === 'number' && typeof input2 === 'number') {
-        result = input1 + input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    // const result = input1  + input2;
-    return result;
+function add(n1, n2) {
+    return n1 + n2;
 }
-const combinedAges = combine(30, 27);
-console.log(combinedAges);
-const combinedNames = combine('Momin', 'Annie');
-console.log(combinedNames);
+function printResult(num) {
+    console.log('Result: ' + num);
+}
+function addAndHandle(n1, n2, cb) {
+    const result = n1 + n2;
+    cb(result);
+}
+printResult(add(5, 12));
+let combinedValues;
+combinedValues = add;
+// combinedValues = printResult;
+console.log('Result Here: ', combinedValues(8, 8));
+addAndHandle(10, 20, (result) => {
+    console.log(result);
+});

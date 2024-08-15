@@ -1,16 +1,27 @@
-function combine (input1: number | string, input2: number | string) {
-    let result;
-    if (typeof input1 === 'number' && typeof input2 === 'number') {
-        result = input1 + input2;
-    }  else {
-        result = input1.toString() + input2.toString();
-    }
-    // const result = input1  + input2;
-    return result;
-} 
 
-const combinedAges = combine(30, 27);
-console.log(combinedAges);
+function add (n1: number, n2: number) {
+    return n1 + n2;
+}
 
-const combinedNames = combine ('Momin', 'Annie');
-console.log(combinedNames);
+function printResult(num: number): void {
+    console.log('Result: ' + num);
+}
+
+function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
+    const result = n1 + n2;
+    cb(result)
+}
+
+
+printResult(add(5, 12));  
+
+let combinedValues: (a: number, b: number) => number;
+
+combinedValues = add;
+// combinedValues = printResult;
+
+console.log('Result Here: ', combinedValues(8, 8));
+
+addAndHandle (10, 20, (result) => {
+    console.log(result);
+});

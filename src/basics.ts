@@ -1,3 +1,5 @@
+export {};
+
 // function multiply(a : number, b: number) {
 //     return a * b;
 // }
@@ -44,7 +46,7 @@ function add(n1: number, n2: number, showResult: boolean, phrase: string) {
     } else {
     return result;
     }
-}
+};
 
 let number1: number; //5.0
 number1 = 5;

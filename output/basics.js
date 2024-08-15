@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // function multiply(a : number, b: number) {
 //     return a * b;
 // }
@@ -31,6 +32,7 @@ function add(n1, n2, showResult, phrase) {
         return result;
     }
 }
+;
 let number1; //5.0
 number1 = 5;
 const number2 = 2.8;
