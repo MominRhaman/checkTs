@@ -1,27 +1,16 @@
+let userInput: unknown;
+let userName: string;
 
-function add (n1: number, n2: number) {
-    return n1 + n2;
-}
+userInput = 5;
+userInput = 'Momin';
 
-function printResult(num: number): void {
-    console.log('Result: ' + num);
-}
+if (typeof userInput === 'string') {
+    userName = userInput;
+};
 
-function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
-    const result = n1 + n2;
-    cb(result)
-}
+function generateError (massage: string, code: number) {
+    throw { massage: massage, errorCode: code};
+};
 
-
-printResult(add(5, 12));  
-
-let combinedValues: (a: number, b: number) => number;
-
-combinedValues = add;
-// combinedValues = printResult;
-
-console.log('Result Here: ', combinedValues(8, 8));
-
-addAndHandle (10, 20, (result) => {
-    console.log(result);
-});
+const result = generateError('An Error Occurred', 500);
+console.log(result);

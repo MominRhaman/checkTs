@@ -1,19 +1,15 @@
 "use strict";
-function add(n1, n2) {
-    return n1 + n2;
+let userInput;
+let userName;
+userInput = 5;
+userInput = 'Momin';
+if (typeof userInput === 'string') {
+    userName = userInput;
 }
-function printResult(num) {
-    console.log('Result: ' + num);
+;
+function generateError(massage, code) {
+    throw { massage: massage, errorCode: code };
 }
-function addAndHandle(n1, n2, cb) {
-    const result = n1 + n2;
-    cb(result);
-}
-printResult(add(5, 12));
-let combinedValues;
-combinedValues = add;
-// combinedValues = printResult;
-console.log('Result Here: ', combinedValues(8, 8));
-addAndHandle(10, 20, (result) => {
-    console.log(result);
-});
+;
+const result = generateError('An Error Occurred', 500);
+console.log(result);
