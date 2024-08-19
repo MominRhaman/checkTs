@@ -11,5 +11,5 @@ function generateError(massage, code) {
     throw { massage: massage, errorCode: code };
 }
 ;
-const result = generateError('An Error Occurred', 500);
-console.log(result);
+generateError('An Error Occurred', 500);
+// console.log(result);

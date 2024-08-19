@@ -8,9 +8,11 @@ if (typeof userInput === 'string') {
     userName = userInput;
 };
 
-function generateError (massage: string, code: number) {
-    throw { massage: massage, errorCode: code};
+function generateError (massage: string, code: number): never {
+    // throw { massage: massage, errorCode: code};
+    while (true) {}
+
 };
 
-const result = generateError('An Error Occurred', 500);
-console.log(result);
+generateError('An Error Occurred', 500);
+// console.log(result);
